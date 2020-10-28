@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>392</y>
+      <w>120</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>PostGraduate
+--
++faculty
++status
++interests
+--
++uploadThesis()
++writeThesis()
++postThesis()
++updateThesis()
++viewProfessor()
++requestMeeting()
++checkResponse()
++acceptSuggestion()
++refuseSuggestion()
++searchProject()
++addInterest()
++viewStatus()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>264</y>
+      <w>120</w>
+      <h>368</h>
+    </coordinates>
+    <panel_attributes>User
+--
++name
++birthDate
++address
++email
++password
++id
++Posts
++connections
+--
++forgetPassword()
++login()
++changePassword()
++editProfile()
++listPosts()
++filterPosts()
++openPost()
++addComment()
++chatWith()
++notify()
++searchUser()
++connectWith()
++listConnections()
++askQuestion()
++answerQuestion()
++call()
++requestConnection()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>400</y>
+      <w>120</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Professor
+--
++title
++departement
++students
++projects
++programs
+--
++listPrograms()
++listStudents()
++listProjects()
++viewStudent()
++addReview()
++checkRequests()
++acceptRequest()
++rejectRequest()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>152</x>
+      <y>992</y>
+      <w>120</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Thesis
+--
++referenceNo
++date
++isLatest
++isFinal
++paper
+--
++deleteThesis()
++compareWith()
++viewThesis()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>752</y>
+      <w>120</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Meeting
+--
++id
++date
++time
++duration
++notes
++student
++professor
++link
+--
++notify()
++joinMeeting()
++endMeeting()
++extendMeeting()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>208</x>
+      <y>752</y>
+      <w>120</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>Request
+--
++id
++type
++date
++time
++duration
++notes
++sender
++reciever
++isConfirmed
+--
++notify()
++acceptConnection()
++rejectConnection()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>568</x>
+      <y>1024</y>
+      <w>120</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
++commentNo
++referenceNo
++comment 
+--
++notify()
++viewComment()
++addComent()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>960</y>
+      <w>120</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Post
+--
++id
++title
++topic
++date
++student
++professor
++latestThesis
++thesesList
++commentList
++reviewList
++isDone
+--
++createPost()
++searchVersion()
++viewAllReviews()
++giveAccess()
++addContributer()
++notify()
++duplicate()
++highlight()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>0</y>
+      <w>120</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Chat
+--
++id
++student
++professor
++messages
+--
++notify()
++visitProfile()
++call()
++requestConnection()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>1312</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Review
+--
++reviewNo
++referenceNo
++review
+--
++notify()
++viewReview()
++addComment()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>512</x>
+      <y>0</y>
+      <w>120</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Notification
+--
++id
++message
++type
+--
++openComment()
++openReview()
++openPost()
++openRequest()
++openMeeting()
++openMessage()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>272</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>48</x>
+      <y>272</y>
+      <w>320</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>1000</y>
+      <w>104</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>1000</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>1232</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>232</x>
+      <y>624</y>
+      <w>160</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+Send/Recieve</panel_attributes>
+    <additional_attributes>10.0;160.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>624</y>
+      <w>128</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..*
+attend</panel_attributes>
+    <additional_attributes>130.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>800</y>
+      <w>184</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Creates</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>136</y>
+      <w>128</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+Gets</panel_attributes>
+    <additional_attributes>10.0;160.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>128</y>
+      <w>128</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..*
+Joins</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>624</y>
+      <w>48</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..*
+
+
+
+
+
+
+
+
+
+
+
+Joins</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;420.0</additional_attributes>
+  </element>
+</diagram>
