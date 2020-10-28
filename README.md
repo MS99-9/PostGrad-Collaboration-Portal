@@ -1,0 +1,2 @@
+# PostGrad Collaboration Portal
+ The theme of the project is extending Universitites Administration Web Portal. It will focus on supporting the postgraduate students and professors through enabling them to collaborate remotely (online) on writing and reviewing their thesis or conference and journal submissions.Design a web portal that will enable the GUC postgraduate students to collaborate with internal professors, as well as professors from external global universities. We will refer to it as “PostGrad Collaboration Portal”.
